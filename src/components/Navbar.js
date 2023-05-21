@@ -1,12 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Navbar() {
+    const [loggedIn, setLoggedIn] = useState(false);
+    useEffect(() => {
+        if (localStorage.getItem("token")) {
+            setLoggedIn(true);
+        }
+        else {
+            setLoggedIn(false);
+        }
+    }, [])
+
+    const handleLogout = () => {
+        localStorage.clear();
+        window.location.reload();
+    }
+
     return (
-        <nav id="mainNav" class="navbar fixed-top navbar-default navbar-expand-lg navbar-light bg-light">
+        <nav id="mainNav" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
             <Link class="navbar-brand" to="/">DONATETHEBLOOD</Link>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -23,24 +38,28 @@ export default function Navbar() {
                     </li>
 
                     <li class="nav-item">
-                        <Link class="nav-link" to="/donate">Donate</Link>
+                        <Link class="nav-link" to="/about">About</Link>
                     </li>
 
                     <li class="nav-item">
                         <Link class="nav-link" to="/donors">Donors</Link>
                     </li>
 
-                    <li class="nav-item">
-                        <Link class="nav-link" to="/search">Search</Link>
-                    </li>
+                    {!loggedIn && <li class="nav-item">
+                        <Link class="nav-link" to="/donate">Donate</Link>
+                    </li>}
 
-                    <li class="nav-item">
+                    {!loggedIn && <li class="nav-item">
                         <Link class="nav-link" to="/signin">Signin</Link>
-                    </li>
+                    </li>}
 
-                    <li class="nav-item">
-                        <Link class="nav-link" to="/about">About Us</Link>
-                    </li>
+                    {loggedIn && <li class="nav-item">
+                        <Link class="nav-link" to="/dashboard">My Profile</Link>
+                    </li>}
+
+                    {loggedIn && <li class="nav-item">
+                        <Link class="nav-link" to="/" onClick={handleLogout}>Logout</Link>
+                    </li>}
 
                 </ul>
             </div>

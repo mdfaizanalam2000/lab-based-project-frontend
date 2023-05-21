@@ -9,7 +9,6 @@ export default function About() {
                 <div class="row">
                     <div class="col-md-6 offset-md-3">
                         <h1 class="text-center">About Us</h1>
-                        <hr class="white-bar" />
                     </div>
                 </div>
             </div>
@@ -32,21 +31,19 @@ export default function About() {
             </div>
 
             <div class="container-fluid white size">
-                <div class="container ">
-                    <div class="container">
-                        <div class="row ">
-                            <div class="col-md-6">
-                                <h2 class="text-center">Our Goal</h2>
-                                <hr class="red-bar" />
-                                <p>
-                                    We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
-                                </p>
-                                <p>
-                                    We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
-                                </p>
-                            </div>
-                            <div ><img src={target} alt="Our Vission" class="rounded img-fluid float-right" /></div>
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-md-6">
+                            <h2 class="text-center">Our Goal</h2>
+                            <hr class="red-bar" />
+                            <p>
+                                We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
+                            </p>
+                            <p>
+                                We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
+                            </p>
                         </div>
+                        <div className='col-md-6' ><img src={target} alt="Our Vission" class="rounded img-fluid float-end" /></div>
                     </div>
                 </div>
             </div>

@@ -1,47 +1,22 @@
 import React from 'react'
 
-export default function Donor() {
+export default function Donor(props) {
+    const { _id, name, email, phone, bloodGroup, gender, age, city } = props.donor;
     return (
-        <>
-            <div class="container-fluid red-background size">
-                <div class="row">
-                    <div class="col-md-6 offset-md-3">
-                        <h1 class="text-center">Donors</h1>
-                        <hr class="white-bar" />
-                    </div>
+        <div className="col-md-4">
+            <div class="card" style={{ width: "20rem" }}>
+                <div class="card-body">
+                    <h5 class="card-title">Donor ID:{_id.substring(0, 10)}</h5>
+                    <p>Name: {name}</p>
+                    <p>Email: {email}</p>
+                    <p>Phone: {phone}</p>
+                    <p>Blood-Group: {bloodGroup}</p>
+                    <p>Gender: {gender}</p>
+                    <p>Age: {age}</p>
+                    <p>City: {city}</p>
+                    {localStorage.getItem("role") === "1" && <i class="fa-solid fa-trash" onClick={() => props.deleteDonor(_id)}></i>}
                 </div>
             </div>
-
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong>Are you delete this record?</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <form target="" method="post">
-                    <br />
-                    <input type="hidden" name="delId" value="" />
-                    <button type="submit" name="delete" class="btn btn-danger">Yes</button>
-                    <button type="button" class="btn btn-info" data-dismiss="alert">
-                        <span aria-hidden="true">Oops! No </span>
-                    </button>
-                </form>
-            </div>
-
-            <br />
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>Message</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-
-            <div class="container" style={{ padding: "60px 0" }}>
-                <div class="row data">
-                </div>
-            </div>
-            <div class="loader" id="wait">
-                <i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i>
-            </div>
-        </>
+        </div>
     )
 }

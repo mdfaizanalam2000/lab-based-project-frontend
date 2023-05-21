@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from "react-router-dom"
 export default function ErrorPage() {
     return (
         <div class="container">
@@ -11,8 +11,7 @@ export default function ErrorPage() {
                         <p class="text-center">Either something went wrong or that page dosent exist anymore.</p>
                     </div>
 
-                    <a href="index.php" class="btn btn-lg btn-danger center-aligned">Home</a>
-
+                    <Link to="/" class="btn btn-lg btn-danger center-aligned">Home</Link>
                 </div>
             </div>
         </div>
