@@ -15,7 +15,7 @@ export default function Signin() {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        const response = await fetch("http://localhost/signin", {
+        const response = await fetch("https://backend-ydhx.onrender.com/signin", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -44,17 +44,17 @@ export default function Signin() {
 
     return (
         <>
-            <div class="container-fluid red-background size">
-                <div class="container my-5 ">
-                    <div class="row">
-                        <div class="col-md-6 offset-md-3 form-container">
+            <div className="container-fluid red-background size">
+                <div className="container my-5 ">
+                    <div className="row">
+                        <div className="col-md-6 offset-md-3 form-container">
                             <h3>SignIn</h3>
-                            <hr class="red-bar" />
+                            <hr className="red-bar" />
                             <form onSubmit={handleLogin}>
-                                <input type="email" name="email" class="form-control my-2" placeholder="Email" required value={userInfo.email} onChange={handleOnchange} />
-                                <input type="password" name="password" placeholder="Password" required class="form-control my-2" value={userInfo.password} onChange={handleOnchange} />
-                                <div class="form-group">
-                                    <button class="btn btn-danger btn-lg center-aligned" type="submit" name="signin">SignIn</button>
+                                <input type="email" name="email" className="form-control my-2" placeholder="Email" required value={userInfo.email} onChange={handleOnchange} />
+                                <input type="password" name="password" placeholder="Password" required className="form-control my-2" value={userInfo.password} onChange={handleOnchange} />
+                                <div className="form-group">
+                                    <button className="btn btn-danger btn-lg center-aligned" type="submit" name="signin">SignIn</button>
                                 </div>
                             </form>
                         </div>

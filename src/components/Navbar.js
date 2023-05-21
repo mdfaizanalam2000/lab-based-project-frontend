@@ -18,47 +18,47 @@ export default function Navbar() {
     }
 
     return (
-        <nav id="mainNav" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-            <Link class="navbar-brand" to="/">DONATETHEBLOOD</Link>
+        <nav id="mainNav" className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <Link className="navbar-brand" to="/">DONATETHEBLOOD</Link>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
 
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
 
                 </ul>
 
-                <ul class="navbar-nav form-inline my-2 my-lg-0">
+                <ul className="navbar-nav form-inline my-2 my-lg-0">
 
-                    <li class="nav-item">
-                        <Link class="nav-link" to="/">Home</Link>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/">Home</Link>
                     </li>
 
-                    <li class="nav-item">
-                        <Link class="nav-link" to="/about">About</Link>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/about">About</Link>
                     </li>
 
-                    <li class="nav-item">
-                        <Link class="nav-link" to="/donors">Donors</Link>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/donors">Donors</Link>
                     </li>
 
-                    {!loggedIn && <li class="nav-item">
-                        <Link class="nav-link" to="/donate">Donate</Link>
+                    {!loggedIn && <li className="nav-item">
+                        <Link className="nav-link" to="/donate">Donate</Link>
                     </li>}
 
-                    {!loggedIn && <li class="nav-item">
-                        <Link class="nav-link" to="/signin">Signin</Link>
+                    {!loggedIn && <li className="nav-item">
+                        <Link className="nav-link" to="/signin">Signin</Link>
                     </li>}
 
-                    {loggedIn && <li class="nav-item">
-                        <Link class="nav-link" to="/dashboard">My Profile</Link>
+                    {loggedIn && <li className="nav-item">
+                        <Link className="nav-link" to="/dashboard">My Profile</Link>
                     </li>}
 
-                    {loggedIn && <li class="nav-item">
-                        <Link class="nav-link" to="/" onClick={handleLogout}>Logout</Link>
+                    {loggedIn && <li className="nav-item">
+                        <Link className="nav-link" to="/" onClick={handleLogout}>Logout</Link>
                     </li>}
 
                 </ul>

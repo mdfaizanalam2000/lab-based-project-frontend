@@ -25,7 +25,7 @@ export default function EditProfile() {
     }, [])
 
     const loadDashboard = async () => {
-        const response = await fetch("http://localhost/getUser", {
+        const response = await fetch("https://backend-ydhx.onrender.com/getUser", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -40,15 +40,8 @@ export default function EditProfile() {
         setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
     }
 
-    const handleSubmitEdit = (e) => {
-        e.preventDefault();
-        updateDatabase();
-        navigate("/dashboard");
-        window.location.reload();
-    }
-
     const updateDatabase = async () => {
-        await fetch("http://localhost/editUser", {
+        await fetch("https://backend-ydhx.onrender.com/editUser", {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -66,6 +59,15 @@ export default function EditProfile() {
         })
     }
 
+    const handleSubmitEdit = (e) => {
+        e.preventDefault();
+        updateDatabase();
+        navigate("/dashboard");
+        setTimeout(() => {
+            window.location.reload();
+        }, 1000)
+    }
+
     return (
         <div className="edit-patron-profile">
             <div className="text-center text-danger mt-5">
@@ -77,7 +79,6 @@ export default function EditProfile() {
                         <form
                             style={{ marginLeft: "20px" }}
                             onSubmit={handleSubmitEdit}
-                            method="patch"
                         >
                             <div className="row">
                                 <div
@@ -208,14 +209,6 @@ export default function EditProfile() {
 
                                 </div>
 
-                                <div
-                                    className="row container edit-patron-profile-input-rows"
-                                    style={{ marginBottom: "10px" }}
-                                >
-
-
-
-                                </div>
                                 <div className="col space">
                                     <label
                                         htmlFor="validationCustom02"

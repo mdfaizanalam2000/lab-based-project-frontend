@@ -16,7 +16,7 @@ export default function Donors() {
     }, []);
 
     const getDonors = async () => {
-        const response = await fetch("http://localhost/getDonors", {
+        const response = await fetch("https://backend-ydhx.onrender.com/getDonors", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -35,7 +35,7 @@ export default function Donors() {
     }
 
     const deleteDonor = async (id) => {
-        await fetch("http://localhost/deleteDonor", {
+        await fetch("https://backend-ydhx.onrender.com/deleteDonor", {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -47,11 +47,11 @@ export default function Donors() {
     }
     return (
         <>
-            <div class="container-fluid red-background size">
-                <div class="row">
-                    <div class="col-md-6 offset-md-3">
-                        <h1 class="text-center">Donors</h1>
-                        <hr class="white-bar" />
+            <div className="container-fluid red-background size">
+                <div className="row">
+                    <div className="col-md-6 offset-md-3">
+                        <h1 className="text-center">Donors</h1>
+                        <hr className="white-bar" />
                     </div>
                     <div className="col-md-4">
                         <select name="filter" id="filter" onChange={handleFilter}>

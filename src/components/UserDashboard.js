@@ -26,7 +26,7 @@ export default function UserDashboard() {
 
 
     const loadDashboard = async () => {
-        const response = await fetch("http://localhost/getUser", {
+        const response = await fetch("https://backend-ydhx.onrender.com/getUser", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -139,7 +139,7 @@ export default function UserDashboard() {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>city: </td>
+                                    <td>City: </td>
                                     <td>
                                         <input readOnly value={userInfo.city} />
                                     </td>
