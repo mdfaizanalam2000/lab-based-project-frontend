@@ -68,7 +68,7 @@ export default function EditProfile() {
 
     return (
         <div className="edit-patron-profile">
-            <div className="text-center text-danger edit-patron-profile-text">
+            <div className="text-center text-danger mt-5">
                 EDIT YOUR PROFILE
             </div>
             <div className="container patron-center">
@@ -114,7 +114,6 @@ export default function EditProfile() {
                                             onChange={onChange}
                                             name="name"
                                         />
-                                        {/* {nameError ? <span>Invalid name</span> : <></>} */}
                                     </div>
                                 </div>
                                 <div
@@ -140,7 +139,6 @@ export default function EditProfile() {
                                             onChange={onChange}
                                             name="phone"
                                         />
-                                        {/* {phoneError ? <span>Invalid Number</span> : <></>} */}
                                     </div>
                                     <div className="col space">
                                         <label

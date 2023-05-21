@@ -26,8 +26,8 @@ function App() {
           <Route path="/editDashboard" element={<EditProfile />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
+      <Footer />
     </>
   );
 }

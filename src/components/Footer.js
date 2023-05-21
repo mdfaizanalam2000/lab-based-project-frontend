@@ -8,16 +8,16 @@ export default function Footer() {
                     <h1 class="text-center">Contact Us</h1>
                     <hr class="white-bar" />
                     <h1 class="text-center">
-                        <a target="_blank" href="https://www.facebook.com/exceptionalprogrammers"><i style={{ color: "#fff" }} class="fab fa-facebook-square mx-2"></i></a>
+                        <a target="_blank" rel='noreferrer' href="https://www.facebook.com"><i style={{ color: "#fff" }} class="fab fa-facebook-square mx-2"></i></a>
 
-                        <a target="_blank" href="https://www.youtube.com/exceptionalprogrammers"><i style={{ color: "#fff" }} class="fab fa-youtube-square mx-2"></i></a>
+                        <a target="_blank" rel='noreferrer' href="https://www.youtube.com"><i style={{ color: "#fff" }} class="fab fa-youtube-square mx-2"></i></a>
                     </h1>
 
-                    <div class="details d-flex justify-content-sm-between">
-                        <p> +91 300 1234567 <i class="fa fa-phone"></i></p>
-                        <p>exceptionalprogrammers@gmail.com <i class="fa fa-envelope"></i>  </p>
+                    <div class="details text-center">
+                        <p><i class="fa fa-phone"></i> +91-8877188983</p>
+                        <p><i class="fa fa-envelope"></i> alamf015@gmail.com</p>
+                        <p>Made with ❤️ by Faizan</p>
                     </div>
-
                 </div>
             </div>
         </div>

@@ -88,7 +88,7 @@ export default function Donate() {
                                     <option value="Others">Others</option>
                                 </select>
                             </div>
-                            <div class="form-inline">
+                            <div class="form-group">
                                 <input type="number" placeholder='Age' class="form-control" onChange={handleOnChange} name='age' value={userData.age} />
                             </div>
                             <div class="form-group">
