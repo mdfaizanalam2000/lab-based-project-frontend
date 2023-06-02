@@ -16,7 +16,7 @@ export default function Donors() {
     }, []);
 
     const getDonors = async () => {
-        const response = await fetch("https://backend-ydhx.onrender.com/getDonors", {
+        const response = await fetch("https://dull-cyan-nightingale-wig.cyclic.app/getDonors", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -35,7 +35,7 @@ export default function Donors() {
     }
 
     const deleteDonor = async (id) => {
-        await fetch("https://backend-ydhx.onrender.com/deleteDonor", {
+        await fetch("https://dull-cyan-nightingale-wig.cyclic.app/deleteDonor", {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

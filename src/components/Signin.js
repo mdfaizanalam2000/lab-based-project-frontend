@@ -15,7 +15,7 @@ export default function Signin() {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        const response = await fetch("https://backend-ydhx.onrender.com/signin", {
+        const response = await fetch("https://dull-cyan-nightingale-wig.cyclic.app/signin", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

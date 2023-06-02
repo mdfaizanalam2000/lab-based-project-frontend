@@ -26,7 +26,7 @@ export default function UserDashboard() {
 
 
     const loadDashboard = async () => {
-        const response = await fetch("https://backend-ydhx.onrender.com/getUser", {
+        const response = await fetch("https://dull-cyan-nightingale-wig.cyclic.app/getUser", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

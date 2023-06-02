@@ -27,7 +27,7 @@ export default function Donate() {
             alert("Passwords are not matching")
         }
         else {
-            const response = await fetch("https://backend-ydhx.onrender.com/signup", {
+            const response = await fetch("https://dull-cyan-nightingale-wig.cyclic.app/signup", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -103,7 +103,7 @@ export default function Donate() {
                             <div className="form-group">
                                 <select className="form-control demo-default" id="role" name="role" required onChange={handleOnChange} value={userData.role}>
                                     <option value="">Select Your Role</option>
-                                    <option value="1">Admin</option>
+                                    <option value="1" disabled>Admin</option>
                                     <option value="2">User</option>
                                 </select>
                             </div>

@@ -25,7 +25,7 @@ export default function EditProfile() {
     }, [])
 
     const loadDashboard = async () => {
-        const response = await fetch("https://backend-ydhx.onrender.com/getUser", {
+        const response = await fetch("https://dull-cyan-nightingale-wig.cyclic.app/getUser", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -41,7 +41,7 @@ export default function EditProfile() {
     }
 
     const updateDatabase = async () => {
-        await fetch("https://backend-ydhx.onrender.com/editUser", {
+        await fetch("https://dull-cyan-nightingale-wig.cyclic.app/editUser", {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
